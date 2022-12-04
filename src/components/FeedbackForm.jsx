@@ -2,7 +2,6 @@ import React, { useState, useContext, useEffect } from "react";
 import RatingSelect from "./RatingSelect";
 import Button from "./shared/Button";
 import Card from "./shared/Card";
-import { v4 as uuidv4 } from "uuid";
 import FeedbackContext from "./context/FeedbackContext";
 
 const FeedbackForm = ({ handleAdd }) => {
@@ -42,7 +41,6 @@ const FeedbackForm = ({ handleAdd }) => {
       setBtnDisabled(true);
     } else {
       const newFeedBack = {
-        id: uuidv4(),
         text,
         rating,
       };
